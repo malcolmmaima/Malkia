@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<tabs>
+    <tab
+        id="@+id/tab_favorites"
+        icon="@drawable/ic_home"
+        title="Home"
+        />
+    <tab
+        id="@+id/tab_explore"
+        icon="@drawable/ic_report"
+        title="Report"  />
+    <tab
+        id="@+id/tab_messages"
+        icon="@drawable/ic_messages"
+        title="Support" />
+    <tab
+
+        id="@+id/tab_profile"
+        icon="@drawable/ic_users"
+        title="Profile" />
+
+</tabs>
