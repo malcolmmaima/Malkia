@@ -3,7 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Malkia.iml" filepath="$PROJECT_DIR$/Malkia.iml" />
-      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://C:\Users\NCST\Documents\GitHub\Malkia\Malkia.iml" filepath="C:\Users\NCST\Documents\GitHub\Malkia\Malkia.iml" />
+      <module fileurl="file://C:\Users\NCST\Documents\GitHub\Malkia\app\app.iml" filepath="C:\Users\NCST\Documents\GitHub\Malkia\app\app.iml" />
     </modules>
   </component>
 </project>
