@@ -1,4 +1,4 @@
-package malkia.malkiaunesco.example.com.malkia.Model;
+package malkia.malkiaunesco.example.com.malkia.models;
 
 /**
  * Created by User on 6/29/2017.

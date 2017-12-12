@@ -1,4 +1,4 @@
-package malkia.malkiaunesco.example.com.malkia.Utils;
+package malkia.malkiaunesco.example.com.malkia.util;
 
 import android.content.Context;
 import android.support.annotation.NonNull;
@@ -6,10 +6,10 @@ import android.util.Log;
 import android.widget.Toast;
 
 import malkia.malkiaunesco.example.com.malkia.R;
-import malkia.malkiaunesco.example.com.malkia.Model.Photo;
-import malkia.malkiaunesco.example.com.malkia.Model.User;
-import malkia.malkiaunesco.example.com.malkia.Model.UserAccountSettings;
-import malkia.malkiaunesco.example.com.malkia.Model.UserSettings;
+import malkia.malkiaunesco.example.com.malkia.models.Photo;
+import malkia.malkiaunesco.example.com.malkia.models.User;
+import malkia.malkiaunesco.example.com.malkia.models.UserAccountSettings;
+import malkia.malkiaunesco.example.com.malkia.models.UserSettings;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;

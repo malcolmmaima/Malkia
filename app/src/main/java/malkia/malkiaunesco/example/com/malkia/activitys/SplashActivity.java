@@ -1,4 +1,4 @@
-package malkia.malkiaunesco.example.com.malkia.Activity;
+package malkia.malkiaunesco.example.com.malkia.activitys;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -25,7 +25,7 @@ public class SplashActivity extends AppCompatActivity {
             @Override
             public void run() {
                 // This method will be executed once the timer is over
-                Intent i = new Intent(SplashActivity.this, MainActivity.class);
+                Intent i = new Intent(SplashActivity.this, LoginActivity.class);
                 startActivity(i);
                 // close this activity
                 finish();

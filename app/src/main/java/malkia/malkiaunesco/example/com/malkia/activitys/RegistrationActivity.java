@@ -1,4 +1,4 @@
-package malkia.malkiaunesco.example.com.malkia.Activity;
+package malkia.malkiaunesco.example.com.malkia.activitys;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;

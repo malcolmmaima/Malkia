@@ -1,4 +1,4 @@
-package malkia.malkiaunesco.example.com.malkia.Utils;
+package malkia.malkiaunesco.example.com.malkia.util;
 
 /**
  * Created by User on 6/26/2017.

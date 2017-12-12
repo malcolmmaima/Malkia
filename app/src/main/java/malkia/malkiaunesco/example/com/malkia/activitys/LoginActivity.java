@@ -1,4 +1,4 @@
-package malkia.malkiaunesco.example.com.malkia.Activity;
+package malkia.malkiaunesco.example.com.malkia.activitys;
 
 import android.content.Context;
 import android.content.Intent;
@@ -36,7 +36,7 @@ public class LoginActivity extends AppCompatActivity {
     private Context mContext;
     private ProgressBar mProgressBar;
     private EditText mEmail, mPassword;
-    private TextView mPleaseWait;
+
 
 
     @Override
@@ -52,7 +52,7 @@ public class LoginActivity extends AppCompatActivity {
         mDatabaseuser= FirebaseDatabase.getInstance().getReference().child("Users");
         mDatabaseuser.keepSynced(true);
 
-        mPleaseWait.setVisibility(View.GONE);
+
         mProgressBar.setVisibility(View.GONE);
 
         setupFirebaseAuth();
@@ -90,7 +90,7 @@ public class LoginActivity extends AppCompatActivity {
                     Toast.makeText(mContext, "You must fill out all the fields", Toast.LENGTH_SHORT).show();
                 }else{
                     mProgressBar.setVisibility(View.VISIBLE);
-                    mPleaseWait.setVisibility(View.VISIBLE);
+
 
                     mAuth.signInWithEmailAndPassword(email, password)
                             .addOnCompleteListener(LoginActivity.this, new OnCompleteListener<AuthResult>() {
@@ -107,14 +107,14 @@ public class LoginActivity extends AppCompatActivity {
                                         Toast.makeText(LoginActivity.this, getString(R.string.auth_failed),
                                                 Toast.LENGTH_SHORT).show();
                                         mProgressBar.setVisibility(View.GONE);
-                                        mPleaseWait.setVisibility(View.GONE);
+
                                     }
                                     else{
                                         Log.d(TAG, "signInWithEmail: successful login");
                                         Toast.makeText(LoginActivity.this, getString(R.string.auth_success),
                                                 Toast.LENGTH_SHORT).show();
                                         mProgressBar.setVisibility(View.GONE);
-                                        mPleaseWait.setVisibility(View.GONE);
+
                                         Intent intent = new Intent(LoginActivity.this, MainActivity.class);
                                         startActivity(intent);
                                         finish();
