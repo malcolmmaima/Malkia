@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "809396282068",
+    "firebase_url": "https://malkia-30338.firebaseio.com",
+    "project_id": "malkia-30338",
+    "storage_bucket": "malkia-30338.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:809396282068:android:898fe12a2804c26e",
+        "android_client_info": {
+          "package_name": "com.example.malkiaunesco.malkia"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "809396282068-8rb9r1em7i1nd2q3f80bau1q365ea7pq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA-SucRy7C2AVNFsdO2QmlgMftlkBBT6ew"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
