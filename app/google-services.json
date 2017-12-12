@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "765566139508",
+    "firebase_url": "https://malkia-8ff1c.firebaseio.com",
+    "project_id": "malkia-8ff1c",
+    "storage_bucket": "malkia-8ff1c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:765566139508:android:3d8d5712155f9331",
+        "android_client_info": {
+          "package_name": "malkia.malkiaunesco.example.com.malkia"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "765566139508-706t8041gart7h3h2130bfh5mkqv0fib.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "malkia.malkiaunesco.example.com.malkia",
+            "certificate_hash": "2384797605fce984519419a65908b67bbee45d52"
+          }
+        },
+        {
+          "client_id": "765566139508-8fnchjpmnb5bt33o3l8joqro099svg91.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCrUh7Pm2uZxQq3JyW4g5JFWo2mRkWUTz8"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "765566139508-8fnchjpmnb5bt33o3l8joqro099svg91.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

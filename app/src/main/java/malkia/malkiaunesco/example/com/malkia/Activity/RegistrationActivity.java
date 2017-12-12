@@ -1,7 +1,10 @@
-package malkia.malkiaunesco.example.com.malkia;
+package malkia.malkiaunesco.example.com.malkia.Activity;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
+import malkia.malkiaunesco.example.com.malkia.R;
+
 
 public class RegistrationActivity extends AppCompatActivity {
 

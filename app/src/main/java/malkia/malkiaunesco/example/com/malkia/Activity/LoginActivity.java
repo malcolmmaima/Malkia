@@ -1,4 +1,4 @@
-package malkia.malkiaunesco.example.com.malkia;
+package malkia.malkiaunesco.example.com.malkia.Activity;
 
 import android.content.Context;
 import android.content.Intent;
@@ -21,6 +21,8 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+
+import malkia.malkiaunesco.example.com.malkia.R;
 
 
 public class LoginActivity extends AppCompatActivity {
@@ -140,7 +142,7 @@ public class LoginActivity extends AppCompatActivity {
          If the user is logged in then navigate to HomeActivity and call 'finish()'
           */
         if(mAuth.getCurrentUser() != null){
-            Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+            Intent intent = new Intent(LoginActivity.this,MainActivity.class);
             startActivity(intent);
             finish();
         }

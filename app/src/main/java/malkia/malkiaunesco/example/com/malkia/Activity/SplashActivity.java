@@ -1,9 +1,12 @@
-package malkia.malkiaunesco.example.com.malkia;
+package malkia.malkiaunesco.example.com.malkia.Activity;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
+
+
+import malkia.malkiaunesco.example.com.malkia.R;
 
 /**
  * Created by malcolm on 12/12/2017.
