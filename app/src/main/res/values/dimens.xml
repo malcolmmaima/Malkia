@@ -4,4 +4,15 @@
     <dimen name="topic_size">17sp</dimen>
     <dimen name="bottom_bar_height">57dp</dimen>
     <dimen name="top_bar_height">50dp</dimen>
+
+    <dimen name="card_content_text">14sp</dimen>
+    <dimen name="card_content_title">24sp</dimen>
+
+    <dimen name="card_padding">15dp</dimen>
+    <dimen name="card_margin">10dp</dimen>
+
+    <dimen name="card_action_margin">3dp</dimen>
+    <dimen name="card_action_padding">8dp</dimen>
+
+    <dimen name="card_stream_bottom_padding">90dp</dimen>
 </resources>

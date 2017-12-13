@@ -5,7 +5,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 
-
+import malkia.malkiaunesco.example.com.malkia.MainActivity;
 import malkia.malkiaunesco.example.com.malkia.R;
 
 /**
@@ -13,7 +13,7 @@ import malkia.malkiaunesco.example.com.malkia.R;
  */
 public class SplashActivity extends AppCompatActivity {
 
-    private static int SPLASH_TIME_OUT = 3000;      // Delay of 3 Seconds
+    private static int SPLASH_TIME_OUT = 2500;      // Delay of 2.5 Seconds
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,7 +25,7 @@ public class SplashActivity extends AppCompatActivity {
             @Override
             public void run() {
                 // This method will be executed once the timer is over
-                Intent i = new Intent(SplashActivity.this, LoginActivity.class);
+                Intent i = new Intent(SplashActivity.this, MainActivity.class);
                 startActivity(i);
                 // close this activity
                 finish();
