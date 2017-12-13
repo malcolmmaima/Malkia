@@ -1,19 +1,18 @@
 package malkia.malkiaunesco.example.com.malkia.activitys;
 
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
+import android.os.Bundle;
 import android.support.annotation.IdRes;
 import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
+
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.roughike.bottombar.BottomBar;
@@ -50,14 +49,13 @@ public class MainActivity extends AppCompatActivity implements TaskFragment.Task
         bottomBar.setOnTabSelectListener(new OnTabSelectListener() {
             @Override
             public void onTabSelected(@IdRes int tabId) {
+                Intent myAct;
                 if (tabId == R.id.tab_favorites) {
-
                     Fragment selected = null;
                     selected = new MessagesFragment();
                     android.support.v4.app.FragmentManager fragmentManager = getSupportFragmentManager();
                     FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
                     fragmentTransaction.replace(R.id.fragment_container, selected);
-                    //  fragmentTransaction.addToBackStack(null);
                     fragmentTransaction.commit();
 
 
@@ -65,12 +63,11 @@ public class MainActivity extends AppCompatActivity implements TaskFragment.Task
 
                 }
                 else if (tabId == R.id.tab_explore) {
-                    Fragment selected = null;
-                    selected = new MessagesFragment();
-                    android.support.v4.app.FragmentManager fragmentManager = getSupportFragmentManager();
-                    FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-                    fragmentTransaction.replace(R.id.fragment_container, selected);
-                    fragmentTransaction.commit();
+
+                    myAct = new Intent(findViewById(tabId).getContext(), MapsActivity.class);
+                    startActivity(myAct);
+
+
                 }
                 else if (tabId == R.id.tab_messages) {
                     Fragment selected = null;
@@ -88,6 +85,8 @@ public class MainActivity extends AppCompatActivity implements TaskFragment.Task
                     fragmentTransaction.replace(R.id.fragment_container, selected);
                     fragmentTransaction.commit();
                 }
+
+
             }
         });
     }

@@ -3,7 +3,11 @@
     package="malkia.malkiaunesco.example.com.malkia">
     <uses-permission android:name="android.permission.INTERNET"/>
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
-
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <!-- PlacePicker also requires OpenGL ES version 2 -->
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true" />
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -13,6 +17,7 @@
         android:theme="@style/AppTheme">
         <activity android:name=".activitys.MainActivity" />
         <activity android:name=".activitys.LoginActivity" />
+        <activity android:name=".activitys.MapsActivity" />
         <activity android:name=".activitys.RegistrationActivity" />
 
         <activity android:name=".activitys.SplashActivity" android:theme="@style/SplashTheme">
@@ -25,5 +30,12 @@
         </activity>
 
     </application>
+    <meta-data android:name="com.google.android.gms.version"
+        android:value="@integer/google_play_services_version" />
+
+    <meta-data
+        android:name="com.google.android.geo.API_KEY"
+        android:value="AIzaSyBfScgem7ei9xz6hAIgUXVtUroSAitS4oA" />
+
 
 </manifest>

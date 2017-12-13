@@ -21,4 +21,18 @@
     <string name="new_photo">new_photo</string>
     <string name="profile_photo">profile_photo</string>
     <string name="Background_photo">Background_photo</string>
+
+    <string name="intro_message">
+        <![CDATA[
+
+            Welcome to Malkia Reporting tool. If you are a victim of FGM or may have witnessed this heinous
+            kindly report the location in which it occurred by either typing the location or pin the location
+            (if you\'re still there). We will log this information and notify the stakeholders who are keen to
+            end FGM.
+
+
+
+
+        ]]>
+    </string>
 </resources>
