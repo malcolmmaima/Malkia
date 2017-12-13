@@ -12,16 +12,16 @@
         <activity android:name=".activitys.MainActivity" />
         <activity android:name=".activitys.LoginActivity" />
         <activity android:name=".activitys.RegistrationActivity" />
-
-        <activity android:name=".activitys.SplashActivity" android:theme="@style/SplashTheme">
+        <activity
+            android:name=".activitys.PostProfileInfo"
+           >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
-
             </intent-filter>
-
         </activity>
-
+       <!-- <activity android:name=".activitys.PostProfileInfo"></activity>-->
     </application>
 
 </manifest>

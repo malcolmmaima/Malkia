@@ -21,4 +21,12 @@
     <string name="new_photo">new_photo</string>
     <string name="profile_photo">profile_photo</string>
     <string name="Background_photo">Background_photo</string>
+
+    //Said
+
+        <string name="radio_male">Male</string>
+        <string name="radio_female">Female</string>
+        <string name="btn_display">Display</string>
+
+    // end
 </resources>

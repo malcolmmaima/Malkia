@@ -116,6 +116,8 @@ public class LoginActivity extends AppCompatActivity {
                                         mProgressBar.setVisibility(View.GONE);
 
                                         Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+                                        // said changes here 12:47 AM
+
                                         startActivity(intent);
                                         finish();
                                     }

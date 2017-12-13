@@ -24,6 +24,8 @@ dependencies {
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
+
+
     compile 'jp.wasabeef:glide-transformations:2.0.2'
     compile 'com.google.firebase:firebase-auth:11.0.4'
     compile 'com.google.firebase:firebase-core:11.0.4'
@@ -42,8 +44,6 @@ dependencies {
     compile 'com.android.support:support-vector-drawable:25.3.0'
     compile 'com.android.support:animated-vector-drawable:25.3.0'
     compile 'com.android.support:transition:25.3.0'
-
-
     testCompile 'junit:junit:4.12'
 }
 apply plugin: 'com.google.gms.google-services'

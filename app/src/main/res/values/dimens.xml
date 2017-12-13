@@ -4,4 +4,8 @@
     <dimen name="topic_size">17sp</dimen>
     <dimen name="bottom_bar_height">57dp</dimen>
     <dimen name="top_bar_height">50dp</dimen>
+
+    //Said
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="appbar_padding_top">8dp</dimen>
 </resources>
