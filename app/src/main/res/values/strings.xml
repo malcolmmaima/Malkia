@@ -21,4 +21,5 @@
     <string name="new_photo">new_photo</string>
     <string name="profile_photo">profile_photo</string>
     <string name="Background_photo">Background_photo</string>
+    <string name="title_activity_about">About</string>
 </resources>
