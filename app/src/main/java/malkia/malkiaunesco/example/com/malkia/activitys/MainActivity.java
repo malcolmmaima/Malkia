@@ -19,7 +19,7 @@ import com.roughike.bottombar.BottomBar;
 import com.roughike.bottombar.OnTabSelectListener;
 
 import malkia.malkiaunesco.example.com.malkia.R;
-import malkia.malkiaunesco.example.com.malkia.fragment.AboutFragment;
+import malkia.malkiaunesco.example.com.malkia.fragment.AlbumFragment;
 import malkia.malkiaunesco.example.com.malkia.fragment.MessagesFragment;
 import malkia.malkiaunesco.example.com.malkia.fragment.ProfileFragment;
 
@@ -53,7 +53,7 @@ public class MainActivity extends AppCompatActivity implements TaskFragment.Task
                 Intent myAct;
                 if (tabId == R.id.tab_favorites) {
                     Fragment selected = null;
-                    selected = new AboutFragment();
+                    selected = new AlbumFragment();
                     android.support.v4.app.FragmentManager fragmentManager = getSupportFragmentManager();
                     FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
                     fragmentTransaction.replace(R.id.fragment_container, selected);
@@ -64,6 +64,7 @@ public class MainActivity extends AppCompatActivity implements TaskFragment.Task
 
                 }
                 else if (tabId == R.id.tab_explore) {
+
 
                     myAct = new Intent(findViewById(tabId).getContext(), MapsActivity.class);
                     startActivity(myAct);

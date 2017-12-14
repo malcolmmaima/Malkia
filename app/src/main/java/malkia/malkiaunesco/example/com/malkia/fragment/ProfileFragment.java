@@ -14,7 +14,9 @@ import android.support.annotation.Nullable;
 import android.support.design.widget.AppBarLayout;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentTransaction;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentPagerAdapter;
+import android.support.v4.view.ViewPager;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -34,6 +36,9 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import malkia.malkiaunesco.example.com.malkia.R;
 import malkia.malkiaunesco.example.com.malkia.activitys.MainActivity;
@@ -86,26 +91,19 @@ public class ProfileFragment extends android.support.v4.app.Fragment
 
         TabLayout tabLayout = (TabLayout) view.findViewById(R.id.materialup_tabs);
         AppBarLayout appbarLayout = (AppBarLayout) view.findViewById(R.id.materialup_appbar);
+
+        ViewPager viewPager  = (ViewPager) view.findViewById(R.id.materialup_viewpager);
         mProfileImage = (ImageView) view.findViewById(R.id.materialup_profile_image);
         mBackgroundPhoto = (ImageView) view.findViewById(R.id.background_profile);
         mPoints = (TextView) view.findViewById(R.id.buntu);
         mUsername = (TextView) view.findViewById(R.id.username);
         profileSettings = (ImageView) view.findViewById(R.id.account_settings);
-        profileSettings.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
 
-                Fragment selected = null;
-                selected = new PostFragment();
-                android.support.v4.app.FragmentManager fragmentManager =  getActivity().getSupportFragmentManager();
-                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-                fragmentTransaction.replace(R.id.show_profile, selected);
-                fragmentTransaction.commit();
-            }
-        });
 
         appbarLayout.addOnOffsetChangedListener(this);
         mMaxScrollSize = appbarLayout.getTotalScrollRange();
+        setupViewPager(viewPager);
+        tabLayout.setupWithViewPager(viewPager);
         mContext = getActivity();
         mFirebaseMethods = new FirebaseMethods(getActivity());
         //Log.d(TAG, "onCreateView: stared.");
@@ -139,26 +137,50 @@ public class ProfileFragment extends android.support.v4.app.Fragment
                     .start();
         }
     }
+    private void setupViewPager(ViewPager viewPager) {
+        ProfileFragment.ViewPagerAdapter adapter = new ProfileFragment.ViewPagerAdapter(getChildFragmentManager());
+
+
+        adapter.addFragment(new PostFragment(), "Settings");
+
+        viewPager.setAdapter(adapter);
+    }
+
+    class ViewPagerAdapter extends FragmentPagerAdapter {
+        private final List<Fragment> mFragmentList = new ArrayList<>();
+        private final List<String> mFragmentTitleList = new ArrayList<>();
+
+        public ViewPagerAdapter(FragmentManager manager) {
+            super(manager);
+        }
+
+        @Override
+        public Fragment getItem(int position) {
+            return mFragmentList.get(position);
+        }
+
+        @Override
+        public int getCount() {
+            return mFragmentList.size();
+        }
+
+        public void addFragment(Fragment fragment, String title) {
+            mFragmentList.add(fragment);
+            mFragmentTitleList.add(title);
+        }
+
+        @Override
+        public CharSequence getPageTitle(int position) {
+            return mFragmentTitleList.get(position);
+        }
+    }
 
 
     private void setProfileWidgets(UserSettings userSettings){
 
         UserAccountSettings settings = userSettings.getSettings();
 
-        Glide.with(getActivity()).load(settings.getProfile_photo())
-                .thumbnail(0.5f)
-                .crossFade()
-                .error(new ColorDrawable(Color.RED))
-                .fallback(new ColorDrawable(Color.GRAY))
-                .diskCacheStrategy(DiskCacheStrategy.ALL)
-                .into(mProfileImage);
-        Glide.with(getActivity()).load(settings.getBackground_photo())
-                .thumbnail(0.5f)
-                .crossFade()
-                .error(new ColorDrawable(Color.RED))
-                .fallback(new ColorDrawable(Color.GRAY))
-                .diskCacheStrategy(DiskCacheStrategy.ALL)
-                .into(mBackgroundPhoto);
+
         mUsername.setText(settings.getUsername());
         mPoints.setText(String.valueOf(settings.getPoints()));
 

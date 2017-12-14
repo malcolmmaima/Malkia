@@ -4,6 +4,7 @@
     <uses-permission android:name="android.permission.INTERNET"/>
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <!-- PlacePicker also requires OpenGL ES version 2 -->
     <uses-feature
         android:glEsVersion="0x00020000"
@@ -15,23 +16,21 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <!--
+        <activity android:name=".activitys.MainActivity"  android:theme="@style/AppTheme.NoActionBar"
+                /> -->
+
         <activity
             android:name=".activitys.MainActivity"
             android:label="@string/title_activity_welcome"
-            android:theme="@style/AppTheme"></activity>
-        <activity android:name=".activitys.LoginActivity"/>
-        <activity android:name=".activitys.MapsActivity" android:theme="@style/Widget.AppCompat.Toolbar.Button.Navigation"/>
-        <activity android:name=".activitys.RegistrationActivity"/>
-<!--
-        <activity android:name=".activitys.SplashActivity" android:theme="@style/SplashTheme">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
+            android:theme="@style/AppTheme.NoActionBar"
+          />
 
-            </intent-filter>
+        <activity android:name=".activitys.LoginActivity" />
+        <activity android:name=".activitys.MapsActivity" />
+        <activity android:name=".activitys.RegistrationActivity" />
 
-        </activity>
--->
+
         <activity android:name=".activitys.WelcomeActivity" android:theme="@style/Theme.Design.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -47,6 +46,6 @@
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyCqRkoLkXurLLhXgV8jUuhYu7Q9wHxt3FE"/>
+            android:value="AIzaSyCrUh7Pm2uZxQq3JyW4g5JFWo2mRkWUTz8"/>
 
 </manifest>

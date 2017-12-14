@@ -25,6 +25,18 @@
     <string name="radio_female">Female</string>
     <string name="btn_display">Display</string>
 
+    <string name="action_add_favourite">Get Notifications</string>
+    <string name="action_play_next">Bookmark</string>
+    <string name="backdrop_title">SAVE THE GIRL CHILD</string>
+    <string name="backdrop_subtitle">Together we can end FGM</string>
+    <string name="action_settings">Settings</string>
+    <string name="send_to">Share Via</string>
+    <string name="opt">options</string>
+    <string name="follow">follow</string>
+    <string name="string_post">Add Post</string>
+    <string name="bodyHint"><font size="14">Body...</font></string>
+    <string name="titlePost"><font size="17">Title...</font></string>
+
     <string name="title_activity_welcome">Home Screen</string>
     <string name="next">NEXT</string>
     <string name="skip">SKIP</string>
@@ -52,6 +64,11 @@
     <string name="play_again_desc">To see the welcome slider again, goto Settings -> apps -> welcome slider -> clear data</string>
     <string name="play_again">Play Again</string>
 
+    <plurals name="likes_count">
+        <item quantity="one">%d like</item>
+        <item quantity="other">%d likes</item>
+    </plurals>
+
     <string name="intro_message">
         <![CDATA[
 
@@ -65,5 +82,4 @@
 
         ]]>
     </string>
-
 </resources>
