@@ -25,6 +25,33 @@
     <string name="radio_female">Female</string>
     <string name="btn_display">Display</string>
 
+    <string name="title_activity_welcome">Home Screen</string>
+    <string name="next">NEXT</string>
+    <string name="skip">SKIP</string>
+    <string name="start">Get Started</string>
+
+    <string name="slide_1_title">#END FGM</string>
+    <string name="slide_1_desc">Dont look away! Join the global fight to end female genital mutilation!</string>
+
+    <string name="slide_2_title">RAISE YOUR VOICE</string>
+    <string name="slide_2_desc">FGM needs to be eliminated!</string>
+
+    <string name="slide_3_title">SAVE A GIRL</string>
+    <string name="slide_3_desc">FGM has nothing to do with Religion!</string>
+
+    <string name="slide_4_title">#END FGM</string>
+    <string name="slide_4_desc">FGM breaches all rights!</string>
+
+
+    <string name="slide_5_title">STOP FGM</string>
+    <string name="slide_5_desc">We are also Human Beings!</string>
+
+    <string name="slide_6_title">BORN PERFECT</string>
+    <string name="slide_6_desc">FGM has no place in the 21 century!</string>
+
+    <string name="play_again_desc">To see the welcome slider again, goto Settings -> apps -> welcome slider -> clear data</string>
+    <string name="play_again">Play Again</string>
+
     <string name="intro_message">
         <![CDATA[
 
@@ -38,4 +65,5 @@
 
         ]]>
     </string>
+
 </resources>

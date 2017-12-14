@@ -3,6 +3,7 @@ package malkia.malkiaunesco.example.com.malkia.activitys;
 /**
  * Created by User on 12/13/2017.
  */
+
 import android.os.Bundle;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
@@ -14,7 +15,6 @@ import malkia.malkiaunesco.example.com.malkia.cardstream.CardStreamState;
 import malkia.malkiaunesco.example.com.malkia.cardstream.OnCardClickListener;
 import malkia.malkiaunesco.example.com.malkia.cardstream.PlacePickerFragment;
 import malkia.malkiaunesco.example.com.malkia.cardstream.StreamRetentionFragment;
-
 
 public class MapsActivity extends SampleActivityBase implements CardStream {
     public static final String TAG = "MapsActivity";
@@ -29,8 +29,6 @@ public class MapsActivity extends SampleActivityBase implements CardStream {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.fragment_report);
-
-
 
         FragmentManager fm = getSupportFragmentManager();
         PlacePickerFragment fragment =
