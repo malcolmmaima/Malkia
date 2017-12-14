@@ -13,13 +13,20 @@
  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
  See the License for the specific language governing permissions and
  limitations under the License.
+
 -->
-<fragment
-    android:id="@+id/fragment_cardstream"
-    android:name="malkia.malkiaunesco.example.com.malkia.cardstream.CardStreamFragment"
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".activitys.MapsActivity"
-    tools:layout="@layout/cardstream"/>
+
+    <fragment
+        android:id="@+id/fragment_cardstream"
+        android:name="malkia.malkiaunesco.example.com.malkia.cardstream.CardStreamFragment"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".activitys.MapsActivity"
+        tools:layout="@layout/cardstream"
+        android:layout_marginBottom="@dimen/bottom_bar_height"/>
+
+
+
+

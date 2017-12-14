@@ -30,6 +30,8 @@ public class MapsActivity extends SampleActivityBase implements CardStream {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.fragment_report);
 
+
+
         FragmentManager fm = getSupportFragmentManager();
         PlacePickerFragment fragment =
                 (PlacePickerFragment) fm.findFragmentByTag(FRAGTAG);

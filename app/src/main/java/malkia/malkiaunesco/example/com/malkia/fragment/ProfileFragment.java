@@ -6,7 +6,6 @@ package malkia.malkiaunesco.example.com.malkia.fragment;
 
 
 import android.content.Context;
-import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
@@ -15,25 +14,19 @@ import android.support.annotation.Nullable;
 import android.support.design.widget.AppBarLayout;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentPagerAdapter;
-import android.support.v4.view.ViewPager;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.RequestManager;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
-import malkia.malkiaunesco.example.com.malkia.R;
-import malkia.malkiaunesco.example.com.malkia.activitys.MainActivity;
-import malkia.malkiaunesco.example.com.malkia.models.UserAccountSettings;
-import malkia.malkiaunesco.example.com.malkia.models.UserSettings;
-import malkia.malkiaunesco.example.com.malkia.util.FirebaseMethods;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
@@ -42,10 +35,11 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
-import java.util.ArrayList;
-import java.util.List;
-
-import de.hdodenhof.circleimageview.CircleImageView;
+import malkia.malkiaunesco.example.com.malkia.R;
+import malkia.malkiaunesco.example.com.malkia.activitys.MainActivity;
+import malkia.malkiaunesco.example.com.malkia.models.UserAccountSettings;
+import malkia.malkiaunesco.example.com.malkia.models.UserSettings;
+import malkia.malkiaunesco.example.com.malkia.util.FirebaseMethods;
 
 
 
@@ -65,6 +59,8 @@ public class ProfileFragment extends android.support.v4.app.Fragment
     private ImageView mBackgroundPhoto;
     private Toolbar toolbar;
     private ImageView profileMenu;
+    private ImageView profileSettings;
+    private Button file;
     private Context mContext;
 
     private ImageView mProfileImage;
@@ -94,6 +90,19 @@ public class ProfileFragment extends android.support.v4.app.Fragment
         mBackgroundPhoto = (ImageView) view.findViewById(R.id.background_profile);
         mPoints = (TextView) view.findViewById(R.id.buntu);
         mUsername = (TextView) view.findViewById(R.id.username);
+        profileSettings = (ImageView) view.findViewById(R.id.account_settings);
+        profileSettings.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Fragment selected = null;
+                selected = new PostFragment();
+                android.support.v4.app.FragmentManager fragmentManager =  getActivity().getSupportFragmentManager();
+                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+                fragmentTransaction.replace(R.id.show_profile, selected);
+                fragmentTransaction.commit();
+            }
+        });
 
         appbarLayout.addOnOffsetChangedListener(this);
         mMaxScrollSize = appbarLayout.getTotalScrollRange();
