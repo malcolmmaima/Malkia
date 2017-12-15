@@ -20,7 +20,6 @@ import com.roughike.bottombar.OnTabSelectListener;
 
 import malkia.malkiaunesco.example.com.malkia.R;
 import malkia.malkiaunesco.example.com.malkia.fragment.AlbumFragment;
-import malkia.malkiaunesco.example.com.malkia.fragment.LocationFragment;
 import malkia.malkiaunesco.example.com.malkia.fragment.MessagesFragment;
 import malkia.malkiaunesco.example.com.malkia.fragment.ProfileFragment;
 
@@ -65,20 +64,13 @@ public class MainActivity extends AppCompatActivity implements TaskFragment.Task
 
                 }
                 else if (tabId == R.id.tab_explore) {
-                    Fragment selected = null;
-                    selected = new LocationFragment();
-                    android.support.v4.app.FragmentManager fragmentManager = getSupportFragmentManager();
-                    FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-                    fragmentTransaction.replace(R.id.fragment_container, selected);
-                    fragmentTransaction.commit();
 
 
-                   // myAct = new Intent(findViewById(tabId).getContext(), MapsActivity.class);
-                   // startActivity(myAct);
+                    myAct = new Intent(findViewById(tabId).getContext(), MapsActivity.class);
+                    startActivity(myAct);
 
 
                 }
-
                 else if (tabId == R.id.tab_messages) {
                     Fragment selected = null;
                     selected = new MessagesFragment();
