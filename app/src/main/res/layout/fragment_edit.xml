@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="15dp"
+    android:background="@color/white"
+    android:id="@+id/my_recycler_view"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        android:orientation="vertical">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/pointsView"
+                android:layout_width="@dimen/icon_width"
+                android:layout_height="@dimen/icon_height"
+                android:padding="@dimen/icon_padding"
+                android:src="@drawable/ic_action_name" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="@dimen/profile_details_size"
+                android:layout_toEndOf="@+id/pointsView"
+                android:layout_toRightOf="@+id/pointsView"
+                android:layout_centerInParent="true"
+                android:padding="2dp"
+                android:text="Buntu Points  "/>
+            <TextView
+                android:id="@+id/buntu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="@dimen/topic_size"
+                android:layout_centerInParent="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:padding="8dp"
+                />
+
+
+
+
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <ImageView
+                android:id="@+id/followersView"
+                android:layout_width="@dimen/icon_width"
+                android:layout_height="@dimen/icon_height"
+                android:padding="@dimen/icon_padding"
+                android:src="@drawable/ic_friends" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="@dimen/profile_details_size"
+                android:layout_toEndOf="@+id/followersView"
+                android:layout_toRightOf="@+id/followersView"
+                android:layout_centerInParent="true"
+                android:padding="2dp"
+                android:text="Followers  "/>
+            <TextView
+                android:id="@+id/follower"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="@dimen/topic_size"
+                android:padding="8dp"
+                android:layout_centerInParent="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                />
+
+        </RelativeLayout>
+
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <ImageView
+                android:id="@+id/followingView"
+                android:layout_width="@dimen/icon_width"
+                android:layout_height="@dimen/icon_height"
+                android:padding="@dimen/icon_padding"
+                android:src="@drawable/ic_friends" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="@dimen/profile_details_size"
+                android:layout_toEndOf="@+id/followingView"
+                android:layout_toRightOf="@+id/followingView"
+                android:layout_centerInParent="true"
+                android:padding="2dp"
+                android:text="Following  "
+                />
+            <TextView
+                android:id="@+id/following"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="@dimen/topic_size"
+                android:padding="8dp"
+                android:layout_centerInParent="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                />
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <ImageView
+                android:id="@+id/websiteView"
+                android:layout_width="@dimen/icon_width"
+                android:layout_height="@dimen/icon_height"
+                android:padding="@dimen/icon_padding"
+                android:src="@drawable/ic_website" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="@dimen/profile_details_size"
+                android:layout_centerInParent="true"
+                android:layout_toEndOf="@+id/websiteView"
+                android:layout_toRightOf="@+id/websiteView"
+                android:padding="2dp"
+                android:text="Website  "/>
+
+        </RelativeLayout>
+        <TextView
+            android:id="@+id/website"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="@dimen/topic_size"
+            android:padding="8dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginStart="40dp"
+            />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <ImageView
+                android:id="@+id/profileView"
+                android:layout_width="@dimen/icon_width"
+                android:layout_height="@dimen/icon_height"
+                android:padding="@dimen/icon_padding"
+                android:src="@drawable/ic_desc" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="@dimen/profile_details_size"
+                android:layout_toEndOf="@+id/profileView"
+                android:layout_toRightOf="@+id/profileView"
+                android:layout_centerInParent="true"
+                android:padding="2dp"
+                android:text="Description"
+                />
+
+
+        </RelativeLayout>
+        <TextView
+            android:id="@+id/description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:layout_marginStart="40dp"
+            android:textColor="@color/black"
+            android:textSize="@dimen/topic_size"
+            android:padding="4dp"
+            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="450dp"
+            android:layout_marginBottom="10dp"
+            android:orientation="vertical"
+            />
+
+
+
+    </LinearLayout>
+
+
+
+
+</ScrollView>
