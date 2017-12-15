@@ -23,6 +23,27 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
+import android.os.Bundle;
+import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
+import android.util.Log;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.TextView;
+
+import malkia.malkiaunesco.example.com.malkia.activitys.MainActivity;
+import malkia.malkiaunesco.example.com.malkia.models.UserAccountSettings;
+import malkia.malkiaunesco.example.com.malkia.models.UserSettings;
+import malkia.malkiaunesco.example.com.malkia.util.FirebaseMethods;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+
 
 import malkia.malkiaunesco.example.com.malkia.R;
 
@@ -34,32 +55,17 @@ import static android.app.Activity.RESULT_OK;
  */
 
 public class PostFragment extends android.support.v4.app.Fragment {
-    private ImageButton mSelectImage;
-    private EditText mPostName;
-    private EditText mPostAge;
-    private EditText mPostPhone;
-
-    private RadioGroup radioSexGroup;
-    private RadioButton radioSexButton;
-
-    private Button mSubmitBtn;
-
-    private Uri mImageUri = null;
-
-    private static final int GALLERY_REQUEST = 1;
-
-    private StorageReference mStorage;
-    private DatabaseReference mDatabase;
-
-    private ProgressDialog mProgress;
+    private FirebaseAuth mAuth;
+    private FirebaseAuth.AuthStateListener mAuthListener;
+    private FirebaseDatabase mFirebaseDatabase;
+    private DatabaseReference myRef;
+    private FirebaseMethods mFirebaseMethods;
+    private String TAG = MainActivity.class.getSimpleName();
+    private TextView mDescription, mWebsite, mFollowing, mFollowers, mBuntu;
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        RequestManager mRequestManager= Glide.with(this);
-
-
-
 
     }
 
@@ -69,90 +75,94 @@ public class PostFragment extends android.support.v4.app.Fragment {
                              Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         View view = inflater.inflate(R.layout.fragment_edit, container, false);
-        mStorage = FirebaseStorage.getInstance().getReference();
-        mDatabase = FirebaseDatabase.getInstance().getReference().child("User Profile");
+        mBuntu = (TextView) view.findViewById(R.id.buntu);
+        mDescription = (TextView) view.findViewById(R.id.description);
+        mFollowers = (TextView) view.findViewById(R.id.follower);
+        mFollowing = (TextView) view.findViewById(R.id.following);
+        mWebsite = (TextView) view.findViewById(R.id.website);
 
-        mSelectImage = (ImageButton) view.findViewById(R.id.imageSelect);
-        mPostName = (EditText) view.findViewById(R.id.inputName);
-        mPostAge = (EditText) view.findViewById(R.id.inputAge);
-        mPostPhone = (EditText) view.findViewById(R.id.inputPhone);
-        radioSexGroup = (RadioGroup) view.findViewById(R.id.radioSex);
-        mSubmitBtn = (Button) view.findViewById(R.id.submitBtn);
-        mProgress = new ProgressDialog(getContext());
-        int selectedId = radioSexGroup.getCheckedRadioButtonId();
-        radioSexButton = (RadioButton) view.findViewById(selectedId);
-        mSelectImage.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent galleryIntent = new Intent(Intent.ACTION_GET_CONTENT);
-                galleryIntent.setType("image/*");
-                startActivityForResult(galleryIntent, GALLERY_REQUEST);
-            }
-        });
+        mFirebaseMethods = new FirebaseMethods(getActivity());
+        Log.d(TAG, "onCreateView: stared.");
 
 
-        mSubmitBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                startPosting();
-
-
-            }
-        });
-
-
-
+        setupFirebaseAuth();
         return view;
     }
-    private void startPosting() {
 
-        mProgress.setMessage("Posting, please wait...");
-        mProgress.show();
+    private void setProfileWidgets(UserSettings userSettings){
 
-
-        final String name_val = mPostName.getText().toString().trim();
-        final String phone_val = mPostPhone.getText().toString().trim();
-        final String age_val = mPostAge.getText().toString().trim();
-        final String userGender = radioSexButton.getText().toString().trim();
+        UserAccountSettings settings = userSettings.getSettings();
 
 
-        if (!TextUtils.isEmpty(name_val) && !TextUtils.isEmpty(phone_val) && !TextUtils.isEmpty(age_val) && mImageUri != null) {
+        mBuntu.setText(String.valueOf(settings.getPoints()));
+        mDescription.setText(String.valueOf(settings.getDescription()));
+        mFollowing.setText(String.valueOf(settings.getFollowing()));
+        mFollowers.setText(String.valueOf(settings.getFollowers()));
+        mWebsite.setText(String.valueOf(settings.getWebsite()));
 
 
-            StorageReference filepath = mStorage.child("Users Pic").child(mImageUri.getLastPathSegment());
-            filepath.putFile(mImageUri).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
-                @Override
-                public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
 
-                    Uri downloadUrl = taskSnapshot.getDownloadUrl();
 
-                    DatabaseReference newPost = mDatabase.push();
 
-                    newPost.child("Name").setValue(name_val);
-                    newPost.child("Phone Number").setValue(phone_val);
-                    newPost.child("Age").setValue(age_val);
-                    newPost.child("Gender").setValue(userGender);
-                    newPost.child("image").setValue(downloadUrl.toString());
+    }
 
-                    mProgress.dismiss();
-                    // startActivity(new Intent(LnfActivity.this, LostAndFoundActivity.class));
 
+
+    private void setupFirebaseAuth(){
+        Log.d(TAG, "setupFirebaseAuth: setting up firebase auth.");
+
+        mAuth = FirebaseAuth.getInstance();
+        mFirebaseDatabase = FirebaseDatabase.getInstance();
+        myRef = mFirebaseDatabase.getReference();
+
+        mAuthListener = new FirebaseAuth.AuthStateListener() {
+            @Override
+            public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
+                FirebaseUser user = firebaseAuth.getCurrentUser();
+
+
+                if (user != null) {
+                    // User is signed in
+                    Log.d(TAG, "onAuthStateChanged:signed_in:" + user.getUid());
+                } else {
+                    // User is signed out
+                    Log.d(TAG, "onAuthStateChanged:signed_out");
                 }
-            });
+                // ...
+            }
+        };
 
-        }
 
+        myRef.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+
+                //retrieve user information from the database
+                setProfileWidgets(mFirebaseMethods.getUserSettings(dataSnapshot));
+
+                //retrieve images for the user in question
+
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+
+            }
+        });
+    }
+
+
+    @Override
+    public void onStart() {
+        super.onStart();
+        mAuth.addAuthStateListener(mAuthListener);
     }
 
     @Override
-    public void onActivityResult(int requestCode, int resultCode, Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-
-        if (requestCode == GALLERY_REQUEST && resultCode == RESULT_OK) {
-
-            mImageUri = data.getData();
-            mSelectImage.setImageURI(mImageUri);
+    public void onStop() {
+        super.onStop();
+        if (mAuthListener != null) {
+            mAuth.removeAuthStateListener(mAuthListener);
         }
     }
 

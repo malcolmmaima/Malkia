@@ -95,7 +95,7 @@ public class AlbumFragment  extends android.support.v4.app.Fragment {
         prepareAlbums();
 
         try {
-            Glide.with(this).load(R.drawable.cover).into((ImageView) view.findViewById(R.id.backdrop));
+            Glide.with(this).load(R.drawable.album1).into((ImageView) view.findViewById(R.id.backdrop));
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -116,7 +116,7 @@ public class AlbumFragment  extends android.support.v4.app.Fragment {
      */
     private void prepareAlbums() {
         int[] covers = new int[]{
-                R.drawable.album1,
+                R.drawable.fgm7,
                 R.drawable.album2,
                 R.drawable.album3,
                 R.drawable.album4,
