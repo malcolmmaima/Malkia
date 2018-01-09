@@ -26,6 +26,7 @@ We came in second and new friendships were formed. At the moment this is just a 
     <img width="480" height="854" alt="Capture" src="https://raw.githubusercontent.com/malcolmmaima/Malkia/master/Screenshots/Screenshot_2018-01-09-16-29-03.png"></img>
 
 </a>
+<br />
 Once you've signed up for an account your details are stored in the firebase DB and you can now login. Build the app and have a go at it *wink wink* )
 </p>
 
@@ -35,7 +36,7 @@ Once you've signed up for an account your details are stored in the firebase DB 
     <img width="480" height="854" alt="Capture" src="https://raw.githubusercontent.com/malcolmmaima/Malkia/master/Screenshots/Screenshot_2018-01-09-16-29-14.png"></img>
 </a>
 </p>
-    
+ <br />
 Once you login to the App, you will see a List of topics with counters of how many updates have been posted under each topic by other users. (Mockup)
 <a href="#">
     <img width="480" height="854" alt="Capture" src="https://raw.githubusercontent.com/malcolmmaima/Malkia/master/Screenshots/Screenshot_2018-01-09-19-40-09.png"></img>
