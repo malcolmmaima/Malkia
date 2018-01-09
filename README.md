@@ -64,7 +64,7 @@ Inbuilt chatbot using the google DiagFlow. This chatbot is fed with FGM related 
     </a>
     <br />
     <br />
-    Pin it.
+    Pin location.
     <a href="#">
     <img class=" wp-image-2403 alignleft" width="300" height="600" alt="Capture" src="https://raw.githubusercontent.com/malcolmmaima/Malkia/master/Screenshots/Screenshot_2018-01-09-19-37-30.png"></img>
 </a>
