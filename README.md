@@ -44,12 +44,11 @@ Once you login to the App, you will see a List of topics with counters of how ma
 
 <h2>Chatbot</h2>
 <p>
-  Inbuilt chatbot using the google DiagFlow. This chatbot is fed with FGM related topics and help information that way the user can engage with the app constantly.
-    <br />
     <a href="#">
     <img class=" wp-image-2403 alignleft" width="480" height="854" alt="Capture" src="https://raw.githubusercontent.com/malcolmmaima/ChakulaPap/master/Screenshots/Screenshot_2018-01-09-19-39-42.png"></img>
 
 </a>
+Inbuilt chatbot using the google DiagFlow. This chatbot is fed with FGM related topics and help information that way the user can engage with the app constantly.
 </p>
 
 <h2>Report Location</h2>
