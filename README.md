@@ -23,7 +23,7 @@ We came in second and new friendships were formed. At the moment this is just a 
 <h2>Login Screen</h2>
 <p>
     <a href="#">
-    <img width="480" height="854" alt="Capture" src="https://raw.githubusercontent.com/malcolmmaima/Malkia/master/Screenshots/Screenshot_2018-01-09-16-29-03.png"></img>
+    <img width="300" height="600" alt="Capture" src="https://raw.githubusercontent.com/malcolmmaima/Malkia/master/Screenshots/Screenshot_2018-01-09-16-29-03.png"></img>
 
 </a>
 <br />
