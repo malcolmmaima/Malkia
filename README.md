@@ -20,6 +20,10 @@ The app is a team effort and was an amazing experience working on at the KNATCOM
 
 We came in second and new friendships were formed. At the moment this is just a prototype and is open to further development.
 
+# License
+
+This project is licensed under <a href="https://github.com/malcolmmaima/Malkia/blob/master/LICENSE">MIT License</a>
+
 <h2>Login Screen</h2>
 <p>
     <a href="#">
