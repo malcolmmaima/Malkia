@@ -76,6 +76,7 @@ Inbuilt chatbot using the google DiagFlow. This chatbot is fed with FGM related 
 <h2>Profile Page</h2>
 <p>
   A personlized profile page for a more personalized experience. Earn Buntu points(reward system) everytime you engage with the app.
+    <br />
     <a href="#">
     <img class=" wp-image-2403 alignleft" width="480" height="854" alt="Capture" src="https://raw.githubusercontent.com/malcolmmaima/Malkia/master/Screenshots/Screenshot_2018-01-09-19-39-48.png"></img>
 
