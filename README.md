@@ -58,16 +58,19 @@ Inbuilt chatbot using the google DiagFlow. This chatbot is fed with FGM related 
   (Concept): Once the GPS co-ordinates have been captured they are sent to our Firebase DB that way our dashboard will be able to access the latitude / longitude points and map it into a nice dashboard UI.
   <br />
   <br />
+  Pick a place.
     <a href="#">
     <img class=" wp-image-2403 alignleft" width="300" height="600" alt="Capture" src="https://raw.githubusercontent.com/malcolmmaima/Malkia/master/Screenshots/Screenshot_2018-01-09-19-36-40.png"></img>
     </a>
     <br />
     <br />
+    Pin it.
     <a href="#">
     <img class=" wp-image-2403 alignleft" width="300" height="600" alt="Capture" src="https://raw.githubusercontent.com/malcolmmaima/Malkia/master/Screenshots/Screenshot_2018-01-09-19-37-30.png"></img>
 </a>
 <br />
 <br />
+Confirm Location
 <a href="#">
     <img class=" wp-image-2403 alignleft" width="300" height="600" alt="Capture" src="https://raw.githubusercontent.com/malcolmmaima/Malkia/master/Screenshots/Screenshot_2018-01-09-19-39-07.png"></img>
 </a>
