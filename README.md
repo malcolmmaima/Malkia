@@ -38,6 +38,7 @@ Once you've signed up for an account your details are stored in the firebase DB 
 
 Once you login to the App, you will see a List of topics with counters of how many updates have been posted under each topic by other users. (Mockup)
 <br />
+<br />
 <a href="#">
     <img width="480" height="854" alt="Capture" src="https://raw.githubusercontent.com/malcolmmaima/Malkia/master/Screenshots/Screenshot_2018-01-09-19-40-09.png"></img>
 </p>
@@ -46,8 +47,7 @@ Once you login to the App, you will see a List of topics with counters of how ma
 <p>
     <a href="#">
     <img class=" wp-image-2403 alignleft" width="480" height="854" alt="Capture" src="https://raw.githubusercontent.com/malcolmmaima/Malkia/master/Screenshots/Screenshot_2018-01-09-19-39-42.png"></img>
-
-</a>
+</a><br />
 Inbuilt chatbot using the google DiagFlow. This chatbot is fed with FGM related topics and help information that way the user can engage with the app constantly.
 </p>
 
@@ -57,13 +57,16 @@ Inbuilt chatbot using the google DiagFlow. This chatbot is fed with FGM related 
   
   (Concept): Once the GPS co-ordinates have been captured they are sent to our Firebase DB that way our dashboard will be able to access the latitude / longitude points and map it into a nice dashboard UI.
   <br />
+  <br />
     <a href="#">
     <img class=" wp-image-2403 alignleft" width="480" height="854" alt="Capture" src="https://raw.githubusercontent.com/malcolmmaima/Malkia/master/Screenshots/Screenshot_2018-01-09-19-36-40.png"></img>
     </a>
     <br />
+    <br />
     <a href="#">
     <img class=" wp-image-2403 alignleft" width="480" height="854" alt="Capture" src="https://raw.githubusercontent.com/malcolmmaima/Malkia/master/Screenshots/Screenshot_2018-01-09-19-37-30.png"></img>
 </a>
+<br />
 <br />
 <a href="#">
     <img class=" wp-image-2403 alignleft" width="480" height="854" alt="Capture" src="https://raw.githubusercontent.com/malcolmmaima/Malkia/master/Screenshots/Screenshot_2018-01-09-19-39-07.png"></img>
