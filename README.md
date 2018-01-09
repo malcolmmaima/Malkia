@@ -35,18 +35,19 @@ Once you've signed up for an account your details are stored in the firebase DB 
     <a href="#">
     <img width="480" height="854" alt="Capture" src="https://raw.githubusercontent.com/malcolmmaima/Malkia/master/Screenshots/Screenshot_2018-01-09-16-29-14.png"></img>
 </a>
-</p>
+
 Once you login to the App, you will see a List of topics with counters of how many updates have been posted under each topic by other users. (Mockup)
 <br />
 <a href="#">
     <img width="480" height="854" alt="Capture" src="https://raw.githubusercontent.com/malcolmmaima/Malkia/master/Screenshots/Screenshot_2018-01-09-19-40-09.png"></img>
+</p>
 
 <h2>Chatbot</h2>
 <p>
   Inbuilt chatbot using the google DiagFlow. This chatbot is fed with FGM related topics and help information that way the user can engage with the app constantly.
     <br />
     <a href="#">
-    <img class=" wp-image-2403 alignleft" width="480" height="854" alt="Capture" src="https://raw.githubusercontent.com/malcolmmaima/ChakulaPap/master/Screenshots/Screenshot_2017-04-10-22-39-42.png"></img>
+    <img class=" wp-image-2403 alignleft" width="480" height="854" alt="Capture" src="https://raw.githubusercontent.com/malcolmmaima/ChakulaPap/master/Screenshots/Screenshot_2018-01-09-19-39-42.png"></img>
 
 </a>
 </p>
@@ -57,11 +58,13 @@ Once you login to the App, you will see a List of topics with counters of how ma
   
   (Concept): Once the GPS co-ordinates have been captured they are sent to our Firebase DB that way our dashboard will be able to access the latitude / longitude points and map it into a nice dashboard UI.
     <a href="#">
-    <img class=" wp-image-2403 alignleft" width="480" height="854" alt="Capture" src="https://raw.githubusercontent.com/malcolmmaima/ChakulaPap/master/Screenshots/Screenshot_2017-04-10-22-36-40.png"></img>
+    <img class=" wp-image-2403 alignleft" width="480" height="854" alt="Capture" src="https://raw.githubusercontent.com/malcolmmaima/ChakulaPap/master/Screenshots/Screenshot_2018-01-09-19-36-40.png"></img>
     </a>
+    <br />
     <a href="#">
-    <img class=" wp-image-2403 alignleft" width="480" height="854" alt="Capture" src="https://raw.githubusercontent.com/malcolmmaima/ChakulaPap/master/Screenshots/Screenshot_2017-04-10-22-37-30.png"></img>
+    <img class=" wp-image-2403 alignleft" width="480" height="854" alt="Capture" src="https://raw.githubusercontent.com/malcolmmaima/ChakulaPap/master/Screenshots/Screenshot_2018-01-09-19-37-30.png"></img>
 </a>
+<br />
 <a href="#">
     <img class=" wp-image-2403 alignleft" width="480" height="854" alt="Capture" src="https://raw.githubusercontent.com/malcolmmaima/ChakulaPap/master/Screenshots/Screenshot_2017-04-10-22-39-07.png"></img>
 </a>
