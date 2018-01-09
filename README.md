@@ -45,7 +45,7 @@ Once you login to the App, you will see a List of topics with counters of how ma
 <h2>Chatbot</h2>
 <p>
     <a href="#">
-    <img class=" wp-image-2403 alignleft" width="480" height="854" alt="Capture" src="https://raw.githubusercontent.com/malcolmmaima/ChakulaPap/master/Screenshots/Screenshot_2018-01-09-19-39-42.png"></img>
+    <img class=" wp-image-2403 alignleft" width="480" height="854" alt="Capture" src="https://raw.githubusercontent.com/malcolmmaima/Malkia/master/Screenshots/Screenshot_2018-01-09-19-39-42.png"></img>
 
 </a>
 Inbuilt chatbot using the google DiagFlow. This chatbot is fed with FGM related topics and help information that way the user can engage with the app constantly.
@@ -56,16 +56,17 @@ Inbuilt chatbot using the google DiagFlow. This chatbot is fed with FGM related 
   The user can report the FGM sighting using the mapping tool powered by Google Maps. This can pick your current location if you're at the site of the FGM ceremony or enter location if you're at remote area far from the FGM sighting. 
   
   (Concept): Once the GPS co-ordinates have been captured they are sent to our Firebase DB that way our dashboard will be able to access the latitude / longitude points and map it into a nice dashboard UI.
+  <br />
     <a href="#">
-    <img class=" wp-image-2403 alignleft" width="480" height="854" alt="Capture" src="https://raw.githubusercontent.com/malcolmmaima/ChakulaPap/master/Screenshots/Screenshot_2018-01-09-19-36-40.png"></img>
+    <img class=" wp-image-2403 alignleft" width="480" height="854" alt="Capture" src="https://raw.githubusercontent.com/malcolmmaima/Malkia/master/Screenshots/Screenshot_2018-01-09-19-36-40.png"></img>
     </a>
     <br />
     <a href="#">
-    <img class=" wp-image-2403 alignleft" width="480" height="854" alt="Capture" src="https://raw.githubusercontent.com/malcolmmaima/ChakulaPap/master/Screenshots/Screenshot_2018-01-09-19-37-30.png"></img>
+    <img class=" wp-image-2403 alignleft" width="480" height="854" alt="Capture" src="https://raw.githubusercontent.com/malcolmmaima/Malkia/master/Screenshots/Screenshot_2018-01-09-19-37-30.png"></img>
 </a>
 <br />
 <a href="#">
-    <img class=" wp-image-2403 alignleft" width="480" height="854" alt="Capture" src="https://raw.githubusercontent.com/malcolmmaima/ChakulaPap/master/Screenshots/Screenshot_2017-04-10-22-39-07.png"></img>
+    <img class=" wp-image-2403 alignleft" width="480" height="854" alt="Capture" src="https://raw.githubusercontent.com/malcolmmaima/Malkia/master/Screenshots/Screenshot_2018-01-09-19-39-07.png"></img>
 </a>
 </p>
 
@@ -73,7 +74,7 @@ Inbuilt chatbot using the google DiagFlow. This chatbot is fed with FGM related 
 <p>
   A personlized profile page for a more personalized experience. Earn Buntu points(reward system) everytime you engage with the app.
     <a href="#">
-    <img class=" wp-image-2403 alignleft" width="480" height="854" alt="Capture" src="https://raw.githubusercontent.com/malcolmmaima/ChakulaPap/master/Screenshots/Screenshot_2017-04-10-22-39-48.png"></img>
+    <img class=" wp-image-2403 alignleft" width="480" height="854" alt="Capture" src="https://raw.githubusercontent.com/malcolmmaima/Malkia/master/Screenshots/Screenshot_2018-01-09-19-39-48.png"></img>
 
 </a>
 </p>
