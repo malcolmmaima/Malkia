@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+
+
+    <android.support.v7.widget.CardView
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:layout_gravity="center"
+        android:layout_width="match_parent"
+        android:layout_marginTop="@dimen/card_margin"
+        android:layout_height="wrap_content"
+        card_view:cardElevation="8dp"
+        android:padding="12dp"
+        card_view:cardCornerRadius="4dp">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:gravity="center"
+                android:textSize="12sp"
+                android:text="Developed by"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+            <TextView
+                android:gravity="center"
+                android:textSize="18sp"
+                android:text="The Semi Colons"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <TextView
+                android:padding="12dp"
+                android:textSize="10dp"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="For comments, improvements and suggestions,contact us" />
+
+            <TextView
+                android:padding="5dp"
+                android:textSize="10dp"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="0712345678" />
+
+            <TextView
+                android:padding="5dp"
+                android:textSize="10dp"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="info@sthesemicolons.com" />
+        </LinearLayout>
+
+
+    </android.support.v7.widget.CardView>
+    <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/post_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:background="#ecf0f1"
+        android:elevation="@dimen/cardview_default_elevation"
+        card_view:cardCornerRadius="4dp">
+
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/profile_image"
+                    android:layout_width="40dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/malkia_original"
+                    app:civ_border_width="1dp"
+                    app:civ_border_color="#FFFFFFFF"/>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/titleTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_height="wrap_content"
+                        android:textSize="12sp"
+                        android:textColor="@android:color/black"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/time"
+                        android:layout_width="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/topic_size"
+                        android:textColor="#9e9e9e"
+                        android:text="Just now"
+                        android:textStyle="bold"
+
+                        />
+                </RelativeLayout>
+
+
+
+            </LinearLayout>
+
+            <malkia.malkiaunesco.example.com.malkia.util.SquareLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+
+
+
+                <ImageView
+                    android:id="@+id/coverImageView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:src="@drawable/malkia_original"
+                    android:scaleType="centerCrop"
+                    />
+
+            </malkia.malkiaunesco.example.com.malkia.util.SquareLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <ImageView
+                    android:id="@+id/commentView"
+                    android:layout_width="@dimen/icon_width"
+                    android:layout_height="@dimen/icon_height"
+                    android:padding="@dimen/icon_padding"
+                    android:src="@drawable/ic_messages" />
+                <TextSwitcher
+                    android:id="@+id/CommentsCounter"
+                    android:layout_centerInParent="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_toEndOf="@+id/commentView"
+                    android:layout_toRightOf="@+id/commentView"
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="50"
+                        android:textSize="@dimen/topic_size"
+                        android:textColor="@color/text_color" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/text_color" />
+                </TextSwitcher>
+
+
+                <ImageView
+                    android:id="@+id/likeImageView"
+                    android:layout_width="@dimen/icon_width"
+                    android:layout_height="@dimen/icon_height"
+                    android:padding="@dimen/icon_padding"
+                    android:layout_toEndOf="@+id/CommentsCounter"
+                    android:layout_toRightOf="@+id/CommentsCounter"
+                    android:src="@drawable/ic_like" />
+                <TextSwitcher
+                    android:id="@+id/tsLikesCounter"
+                    android:layout_centerInParent="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_toEndOf="@+id/likeImageView"
+                    android:layout_toRightOf="@+id/likeImageView"
+                   >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="123"
+                        android:textSize="@dimen/topic_size"
+                        android:textColor="@color/text_color" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/text_color" />
+                </TextSwitcher>
+
+                <ImageView
+                    android:id="@+id/shareImageView"
+                    android:layout_width="@dimen/icon_width"
+                    android:layout_height="@dimen/icon_height"
+                    android:layout_toEndOf="@+id/tsLikesCounter"
+                    android:layout_toRightOf="@+id/tsLikesCounter"
+                    android:padding="@dimen/icon_padding"
+                    android:src="@drawable/ic_share" />
+
+            </RelativeLayout>
+
+
+
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>
