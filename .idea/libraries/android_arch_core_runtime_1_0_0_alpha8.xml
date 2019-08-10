@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="android.arch.core:runtime-1.0.0-alpha8">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.android/build-cache/e43550f156933b7ed47c4b2b86c795a35fe6c61f/output/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.android/build-cache/e43550f156933b7ed47c4b2b86c795a35fe6c61f/output/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/android.arch.core/runtime/1.0.0-alpha8/f76b1ee35e45820d98b6cacc4007ada5c18b4f53/runtime-1.0.0-alpha8-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
